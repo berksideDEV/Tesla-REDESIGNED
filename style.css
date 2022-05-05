@@ -1,0 +1,581 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+  }
+  html{
+      scroll-behavior: smooth;
+  }
+  body{
+    font-family: 'Orbitron', sans-serif;
+    -webkit-user-select:none;-moz-user-select:-moz-none;
+    -ms-user-select:none;user-select:none;
+  }
+  @keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #E15FED,
+        0 0 80px #E15FED,
+        0 0 90px #E15FED,
+        0 0 100px #E15FED,
+        0 0 150px #E15FED;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  @keyframes flicker-blue {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px blue,
+        0 0 80px blue,
+        0 0 90px blue,
+        0 0 100px blue,
+        0 0 150px blue;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  @keyframes flicker-white {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #fff,
+        0 0 80px #fff,
+        0 0 90px #fff,
+        0 0 100px #fff,
+        0 0 150px #fff;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  @keyframes flicker-green {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px green,
+        0 0 11px green,
+        0 0 19px green,
+        0 0 40px green,
+        0 0 80px green,
+        0 0 90px green,
+        0 0 100px green,
+        0 0 150px green;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  #main{
+    background-image: url(images/main-page-cybertruck.jpg);
+    background-size:cover;
+    height:calc(100vh - 80px);
+  }
+  nav{
+    background-color:black;
+    height:80px;
+    width:100%;
+
+  }
+
+  label.logo{
+    color:white;
+    font-size:35px;
+    line-height:120px;
+    padding:0 100px;
+    font-weight:bold;
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 90px #fff,
+    0 0 100px #fff,
+    0 0 150px #fff;
+  }
+  nav ul{
+    float:right;
+    margin-right:20px;
+  }
+  nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin:0 5px;
+  }
+  nav ul li a{
+    color:white;
+    font-size:17px;
+    padding:7px 13px;
+    border-radius:3px;
+    text-transform:uppercase;
+  }
+  a.active,a:hover{
+    background:#1b9bff;
+    transition:.5s;
+  }
+  .checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height:80px;
+    margin-right:40px;
+    cursor:pointer;
+    display:none;
+  }
+  #check{
+    display:none;
+  }
+  #brand{
+    font-size: 14vw;
+    color: white;
+    text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff;
+    text-align: center;
+    animation-name: brand;
+    animation: flicker 1.0s infinite alternate;
+    animation-duration: 4s;
+}
+#brand a{
+    border:none;
+    background:transparent;
+}
+#brand-text{
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 1rem;
+    animation: none;
+    transform: none;
+    text-shadow: none;
+}
+#content{
+
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.scroll {
+    font-size: 5rem;
+    text-align: center;
+	  position: relative;
+    border-radius:50%;
+	  animation: down 1.5s infinite;
+	  -webkit-animation: down 1.5s infinite;
+    transform: none;
+    text-shadow: none;
+    transition:0.2s;
+    width: 80px;
+    height: 80px;
+    color: white;
+    bottom: 1.5rem;
+}
+.scroll:hover{
+    border:3px solid white;
+    border-radius:50%;
+    cursor: pointer;
+    
+}
+#model-s{
+    position:relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:800px;
+    background-attachment:fixed;
+
+}
+#model-s h1{
+    font-size: 8rem;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    animation-name: brand;
+    color: white;
+    text-shadow:
+    /* White glow */
+    0 0 7px blue,
+    0 0 10px blue,
+    0 0 21px blue;
+    animation: flicker 0.5s infinite alternate;
+    animation-duration: 4s;
+}
+#model-s img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 350px;
+    z-index: 3;
+}
+
+.navbar-bottom {
+    background-color: black;
+    overflow: hidden;
+    position:absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    bottom: 5rem;
+    height: 20%;
+    width: 50rem;
+    backdrop-filter: saturate(180%) blur(2px);
+    border-radius: 10px;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar-bottom  a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 80px 80px;
+    text-decoration: none;
+    font-size: 17px;
+    pointer-events: none;
+    
+  }
+  .speed{
+      font-size: 2rem;
+      position:absolute;
+      top:50%;
+      left: 5%;
+      transform: translateY(-50%);
+  }
+  #speed-info{
+      font-size: 0.8rem;
+      color: aqua;
+      left: 80%;
+      margin-top: 20px;
+  }
+  .fuel{
+    font-size: 2rem;
+    position:absolute;
+    top:50%;
+    left: 40%;
+    transform: translateY(-50%);
+  }
+  #fuel-info{
+    font-size: 0.8rem;
+    color: aqua;
+    left: 80%;
+    margin-top: 20px;
+  }
+  .engine{
+    font-size: 2rem;
+    position:absolute;
+    top:50%;
+    left: 80%;
+    transform: translateY(-50%);
+  }
+  #engine-info{
+    font-size: 0.8rem;
+    color: aqua;
+    left: 80%;
+    margin-top: 20px;
+  }
+
+  #model3{
+    position:relative;
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:800px;
+    background-attachment:fixed;
+  }
+  #model3 h1{
+    font-size: 8rem;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    color: white;
+    animation-name: brand;
+    animation: flicker-blue 0.5s infinite alternate;
+    animation-duration: 4s;
+}
+#model3 img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 830px;
+  height: 332px;
+  z-index: 3;
+}
+.navbar-bottom1 {
+    background-color: black;
+    overflow: hidden;
+    position:absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    bottom: 5rem;
+    height: 20%;
+    width: 50rem;
+    backdrop-filter: saturate(180%) blur(2px);
+    border-radius: 10px;
+
+}
+.navbar-bottom1  a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 80px 80px;
+  text-decoration: none;
+  font-size: 17px;
+  pointer-events: none;
+}
+.navbar-bottom1  a:hover {
+    user-select: none;
+    background:black;
+
+  }
+
+#modelx{
+  position:relative;
+  
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:800px;
+  background-attachment:fixed;
+}
+#modelx h1{
+  font-size: 8rem;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  color: white;
+
+
+  animation: flicker-white 0.5s infinite alternate;
+  animation-duration: 4s;
+}
+#modelx img{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 830px;
+height: 332px;
+z-index: 3;
+}
+.navbar-bottom2 {
+background-color: black;
+overflow: hidden;
+position:absolute;
+left: 50%;
+transform:translateX(-50%);
+bottom: 5rem;
+height: 20%;
+width: 50rem;
+backdrop-filter: saturate(180%) blur(2px);
+border-radius: 10px;
+
+}
+.navbar-bottom2  a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 80px 80px;
+text-decoration: none;
+font-size: 17px;
+pointer-events: none;
+}
+
+
+#modely{
+  position:relative;
+  
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:800px;
+  background-attachment:fixed;
+}
+#modely h1{
+  font-size: 8rem;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  color: white;
+  animation: flicker-green 0.5s infinite alternate;
+  animation-duration: 4s;
+}
+#modely img{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 750px;
+height: 350px;
+z-index: 3;
+}
+.navbar-bottom3 {
+background-color: black;
+overflow: hidden;
+position:absolute;
+left: 50%;
+transform:translateX(-50%);
+bottom: 5rem;
+height: 20%;
+width: 50rem;
+backdrop-filter: saturate(180%) blur(2px);
+border-radius: 10px;
+
+}
+.navbar-bottom3  a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 80px 80px;
+text-decoration: none;
+font-size: 17px;
+pointer-events: none;
+}
+ 
+  @media (max-width:952px){
+    label.logo{
+      font-size:30px;
+      padding-left:50px;
+    }
+    ul{
+        z-index: 999;
+    }
+    nav ul li a{
+      font-size:16px;
+    }
+  }
+
+  @media (max-width:865.60px){
+      body{
+          overflow-x: hidden;
+      }
+      .navbar-bottom,.navbar-bottom1,.navbar-bottom2,.navbar-bottom3{
+        width: 24rem;
+      }
+      #speed-info,#fuel-info,#engine-info{
+          font-size: 10px;
+      }
+      .speed,.fuel,.engine{
+          font-size: 16px;
+      }
+    #main{
+        background-position: center;
+        background-size: contain no-repeat;
+    }
+    .scroll{
+        margin-top: 5rem;
+    }
+    #model3 h1{
+        font-size: 25px;
+    }
+    #model3 img{
+        width:100vw;
+        height:50vw;
+    }
+    #model-s h1{
+        font-size: 25px;
+    }
+    #model-s img{
+        width:95vw;
+        height:50vw;
+    }
+    #modelx h1{
+        font-size: 25px;
+    }
+    #modelx img{
+        width:100vw;
+        height:50vw;
+    }
+    #modely h1{
+        font-size: 25px;
+    }
+    #modely img{
+        width:100vw;
+        height:50vw;
+    }
+    .checkbtn{
+      display:block;
+    }
+    ul{
+      position:fixed;
+      width:100%;
+      height:100vh;
+      background:#2c3e50;
+      top:80px;
+      left:-100%;
+      text-align:center;
+      
+      
+    }
+
+    nav ul li{
+      display:block;
+      overflow: hidden;
+    }
+    nav ul li a{
+      font-size:20px;
+    }
+    a:hover,a.active{
+      background:none;
+      color:#0082e6;
+    }
+    #check:checked ~ ul{
+      left:0;
+    }
+
+}
