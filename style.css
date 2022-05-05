@@ -107,7 +107,7 @@
   #main{
     background-image: url(images/main-page-cybertruck.jpg);
     background-size:cover;
-    height:calc(100vh - 80px);
+    height:100vh;
   }
   nav{
     background-color:black;
@@ -220,8 +220,8 @@
 #model-s{
     position:relative;
     background-repeat: no-repeat;
-    background-size:cover;
-    height:800px;
+    background-size:contain;
+    height:100vh;
     background-attachment:fixed;
 
 }
@@ -321,10 +321,9 @@
 
   #model3{
     position:relative;
-    
     background-repeat: no-repeat;
-    background-size:cover;
-    height:800px;
+    background-size:contain;
+    height:100vh;
     background-attachment:fixed;
   }
   #model3 h1{
@@ -380,10 +379,9 @@
 
 #modelx{
   position:relative;
-  
   background-repeat: no-repeat;
-  background-size:cover;
-  height:800px;
+  background-size:contain;
+  height:100vh;
   background-attachment:fixed;
 }
 #modelx h1{
@@ -436,10 +434,9 @@ pointer-events: none;
 
 #modely{
   position:relative;
-  
   background-repeat: no-repeat;
-  background-size:cover;
-  height:800px;
+  background-size:contain;
+  height:100vh;
   background-attachment:fixed;
 }
 #modely h1{
@@ -504,8 +501,12 @@ pointer-events: none;
       body{
           overflow-x: hidden;
       }
+      nav,ul{
+        position:fixed !important;
+        z-index: 999;
+      }
       .navbar-bottom,.navbar-bottom1,.navbar-bottom2,.navbar-bottom3{
-        width: 24rem;
+        width: 100% !important;
       }
       #speed-info,#fuel-info,#engine-info{
           font-size: 10px;
@@ -514,38 +515,46 @@ pointer-events: none;
           font-size: 16px;
       }
     #main{
-        background-position: center;
-        background-size: contain no-repeat;
+      background-image: url(images/main-tesla8.webp);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #brand{
+      animation-name:flicker-blue ;
     }
     .scroll{
         margin-top: 5rem;
     }
     #model3 h1{
-        font-size: 25px;
+      font-size: 40px;
     }
     #model3 img{
         width:100vw;
         height:50vw;
     }
     #model-s h1{
-        font-size: 25px;
+        font-size: 40px;
+        padding-bottom:  30px;
     }
     #model-s img{
         width:95vw;
         height:50vw;
     }
     #modelx h1{
-        font-size: 25px;
+      font-size: 40px;
+      padding-bottom:  30px;
     }
     #modelx img{
         width:100vw;
         height:50vw;
     }
     #modely h1{
-        font-size: 25px;
+      font-size: 40px;
+      padding-bottom:  30px;
     }
     #modely img{
-        width:100vw;
+        width:96vw;
         height:50vw;
     }
     .checkbtn{
