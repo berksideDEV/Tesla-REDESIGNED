@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 
     </head>
 <body>
@@ -27,12 +28,12 @@
           <i class="fas fa-bars"></i>
         </label>
         <label class="logo"><img src="images/pngaaa.com-1516160.png" style="width:64px; height:64px;"></label>
-        <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#model-s" class="one">Model S</a></li>
-          <li><a href="#model3">Model 3</a></li>
-          <li><a href="#modelx">Model X</a></li>
-          <li><a href="#modely">Model Y</a></li>
+        <ul id="menu">
+          <li><a href="#home"  class="active menuhome" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#model-s" class="one menuhome" >Model S</a></li>
+          <li><a href="#model3" class="menuhome"  >Model 3</a></li>
+          <li><a href="#modelx" class="menuhome" >Model X</a></li>
+          <li><a href="#modely" class="menuhome" onclick="toggleMenu()">Model Y</a></li>
         </ul>
       </nav>
 
@@ -90,25 +91,6 @@
 <!--Not working properly CHECK it later.-->
 <script>
     
-if (window.matchMedia('(max-width: 866px)').matches)
-{
-    $("#check").click(function(e) {
-  $('ul').show();
-
-
-});
-
-
-$('ul li a').on('click', function(e) {
-
-  $('ul').toggle();
-  
-
-
-});
-
-$(window).resize(function(){location.reload();});
-}
 
 
 </script>
