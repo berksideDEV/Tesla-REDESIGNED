@@ -104,6 +104,64 @@
         text-shadow: none;
     }    
   }
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  .bar{
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+  }
+  img.nav-branding{
+    width:64px;
+    height:64px;
+  }
+  @media(max-width:865px){
+    .hamburger{
+      display:block;
+      float: right;
+      padding: 25px;
+    }
+    .hamburger.active .bar:nth-child(2){
+      opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+      transform:translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+      transform:translateY(-8px) rotate(-45deg);
+    }
+    img.nav-branding{
+      width:64px;
+      height:64px;
+      position:relative;
+      top:10px;
+      left:15px;
+    }
+    .nav-menu{
+      position: fixed;
+      left:-150%;
+      top:70px;
+      gap:0;
+      flex-direction: column;
+      background-color: black;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .nav-item{
+      margin: 16px 0;
+    }
+    .nav-menu.active{
+      left:-50%;
+    }
+  }
+
   #main{
     background-image: url(images/main-page-cybertruck.jpg);
     background-size:cover;
@@ -116,23 +174,6 @@
     width:100%;
     z-index: 999;
 
-  }
-
-  label.logo{
-    color:white;
-    font-size:35px;
-    line-height:120px;
-    padding:0 100px;
-    font-weight:bold;
-    text-shadow:
-    0 0 4px #fff,
-    0 0 11px #fff,
-    0 0 19px #fff,
-    0 0 40px #fff,
-    0 0 80px #fff,
-    0 0 90px #fff,
-    0 0 100px #fff,
-    0 0 150px #fff;
   }
   nav ul{
     float: right;
@@ -156,18 +197,6 @@
   a.active,a:hover{
     background:#1b9bff;
     transition:.5s;
-  }
-  .checkbtn{
-    font-size:30px;
-    color:white;
-    float:right;
-    line-height:80px;
-    margin-right:40px;
-    cursor:pointer;
-    display:none;
-  }
-  #check{
-    display:none;
   }
   #brand{
     font-size: 14vw;
@@ -490,10 +519,6 @@ pointer-events: none;
 }
  
   @media (max-width:980px){
-    label.logo{
-      font-size:30px;
-      padding-left: 20px;
-    }
     ul{
       z-index: 999;
     }
@@ -501,7 +526,17 @@ pointer-events: none;
       font-size:16px;
     }
   }
-
+  @media (max-width:1919px){
+    #model-s h1{
+      font-size: 80px;
+      padding-bottom: 180px;
+    }
+    #model-s img{
+      width:40vw;
+      height:20vw;
+      padding-bottom: 80px;
+  }
+  }
   @media (max-width:865.60px){
       body{
           overflow-x: hidden;
@@ -593,8 +628,6 @@ pointer-events: none;
       background:none;
       color:#0082e6;
     }
-    #check:checked ~ ul{
-      left:-50%;
-    }
+
 
 }
