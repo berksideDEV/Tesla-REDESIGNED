@@ -17,26 +17,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    
 
     </head>
 <body>
   <span id="home"></span>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><img src="images/pngaaa.com-1516160.png" style="width:64px; height:64px;"></label>
-        <ul id="menu">
-          <li><a href="#home"  class="active menuhome" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#model-s" class="one menuhome" >Model S</a></li>
-          <li><a href="#model3" class="menuhome"  >Model 3</a></li>
-          <li><a href="#modelx" class="menuhome" >Model X</a></li>
-          <li><a href="#modely" class="menuhome" onclick="toggleMenu()">Model Y</a></li>
+      <nav class="navbar">
+        <img src="images/tesla_logo.png" alt="" srcset="" class="nav-branding">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#model-s" class="nav-link">Model S</a>
+          </li>
+          <li class="nav-item">
+            <a href="#model3" class="nav-link">Model 3</a>
+          </li>
+          <li class="nav-item">
+            <a href="#modelx" class="nav-link">Model X</a>
+          </li>
+          <li class="nav-item">
+            <a href="#modely" class="nav-link">Model Y</a>
+          </li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
-
       <section id="main">
       <div id="content">
         <h1 id="brand">TESLA
@@ -89,11 +96,6 @@
     
         
 <!--Not working properly CHECK it later.-->
-<script>
-    
-
-
-</script>
 
 
 
@@ -175,5 +177,7 @@ baseColor: 0x0,
 speed: 1.20
 })
 </script>
+
+<script src="script.js"></script>
 </body>
 </html>
