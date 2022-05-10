@@ -120,6 +120,9 @@
   img.nav-branding{
     width:64px;
     height:64px;
+    margin-top:8px;
+    margin-left: 30px;
+
   }
   @media(max-width:865px){
     .hamburger{
@@ -260,6 +263,7 @@
 
 }
 #model-s h1{
+    padding-bottom:  8rem;
     font-size: 8rem;
     text-align: center;
     position: absolute;
@@ -362,6 +366,7 @@
   }
   #model3 h1{
     font-size: 8rem;
+    padding-bottom:  8rem;
     text-align: center;
     position: absolute;
     top: 30%;
@@ -420,6 +425,7 @@
 }
 #modelx h1{
   font-size: 8rem;
+  padding-bottom:  8rem;
   text-align: center;
   position: absolute;
   top: 30%;
@@ -474,6 +480,7 @@ pointer-events: none;
   background-attachment:fixed;
 }
 #modely h1{
+  padding-bottom:  8rem;
   font-size: 8rem;
   text-align: center;
   position: absolute;
@@ -517,7 +524,11 @@ text-decoration: none;
 font-size: 17px;
 pointer-events: none;
 }
- 
+  @media(max-width:500px){
+    #model-s img{
+      height:5px;
+    }
+  }
   @media (max-width:980px){
     ul{
       z-index: 999;
@@ -528,14 +539,26 @@ pointer-events: none;
   }
   @media (max-width:1919px){
     #model-s h1{
-      font-size: 80px;
-      padding-bottom: 180px;
+      font-size: 5rem;
+      padding-bottom:  8rem;
     }
-    #model-s img{
+    #model3 h1{
+      font-size: 5rem;
+      padding-bottom:  8rem;
+    }
+    #modelx h1{
+      font-size: 5rem;
+      padding-bottom:  8rem;
+    }
+    #modely h1{
+      font-size: 5rem;
+      padding-bottom:  8rem;
+    }
+    /*#model-s img{
       width:40vw;
       height:20vw;
-      padding-bottom: 80px;
-  }
+      padding-bottom: 80px;*/
+  
   }
   @media (max-width:865.60px){
       body{
@@ -571,35 +594,36 @@ pointer-events: none;
         margin-top: 5rem;
     }
     #model3 h1{
-      font-size: 40px;
+      font-size: 2.5rem;
+      padding-bottom:  8rem;
     }
     #model3 img{
-        width:100vw;
-        height:50vw;
+      width:100vw;
+      height:45vh;
     }
     #model-s h1{
-        font-size: 40px;
-        padding-bottom:  30px;
+        font-size: 2.5rem;
+        padding-bottom:  8rem;
     }
     #model-s img{
-        width:95vw;
-        height:50vw;
+        width:80vw;
+        height:40vh;
     }
     #modelx h1{
-      font-size: 40px;
-      padding-bottom:  30px;
+      font-size: 2.5rem;
+      padding-bottom:  8rem;
     }
     #modelx img{
         width:100vw;
-        height:50vw;
+        height:40vh;
     }
     #modely h1{
-      font-size: 40px;
-      padding-bottom:  30px;
+      font-size: 2.5rem;
+      padding-bottom:  8rem;
     }
     #modely img{
-        width:96vw;
-        height:50vw;
+        width:80vw;
+        height:40vh;
     }
 
     .checkbtn{
