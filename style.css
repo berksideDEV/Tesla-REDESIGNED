@@ -139,13 +139,6 @@
     .hamburger.active .bar:nth-child(3){
       transform:translateY(-8px) rotate(-45deg);
     }
-    img.nav-branding{
-      width:64px;
-      height:64px;
-      position:relative;
-      top:10px;
-      left:15px;
-    }
     .nav-menu{
       position: fixed;
       left:-150%;
